@@ -55,7 +55,10 @@ def main():
                 else:
                     result='Placed'
                 st.success('The Student Is {}'.format(result))
-    
+    from streamlit_js_eval import streamlit_js_eval
+    if st.button("Refresh"):
+        streamlit_js_eval(js_expressions="parent.window.location.reload()")
+
 
 if __name__=='__main__':
     main()
